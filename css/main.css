@@ -1,0 +1,587 @@
+@charset "utf-8";
+/*family organics color pallet
+
+*** Primary color: Forest Green
+
+   shade 0 = #324F35 = rgb( 50, 79, 53) = rgba( 50, 79, 53,1) = rgb0(0.196,0.31,0.208)
+   shade 1 = #618265 = rgb( 97,130,101) = rgba( 97,130,101,1) = rgb0(0.38,0.51,0.396)
+   shade 2 = #4A6C4E = rgb( 74,108, 78) = rgba( 74,108, 78,1) = rgb0(0.29,0.424,0.306)
+   shade 3 = #214B26 = rgb( 33, 75, 38) = rgba( 33, 75, 38,1) = rgb0(0.129,0.294,0.149)
+   shade 4 = #14441A = rgb( 20, 68, 26) = rgba( 20, 68, 26,1) = rgb0(0.078,0.267,0.102)
+
+*** Secondary color (1): Blue Blue-Green
+
+   shade 0 = #273C3E = rgb( 39, 60, 62) = rgba( 39, 60, 62,1) = rgb0(0.153,0.235,0.243)
+   shade 1 = #4D6466 = rgb( 77,100,102) = rgba( 77,100,102,1) = rgb0(0.302,0.392,0.4)
+   shade 2 = #3A5255 = rgb( 58, 82, 85) = rgba( 58, 82, 85,1) = rgb0(0.227,0.322,0.333)
+   shade 3 = #1A383B = rgb( 26, 56, 59) = rgba( 26, 56, 59,1) = rgb0(0.102,0.22,0.231)
+   shade 4 = #103235 = rgb( 16, 50, 53) = rgba( 16, 50, 53,1) = rgb0(0.063,0.196,0.208)
+
+*** Secondary color (2): Sage Green
+
+   shade 0 = #525E3C = rgb( 82, 94, 60) = rgba( 82, 94, 60,1) = rgb0(0.322,0.369,0.235)
+   shade 1 = #8D9B74 = rgb(141,155,116) = rgba(141,155,116,1) = rgb0(0.553,0.608,0.455)
+   shade 2 = #738158 = rgb(115,129, 88) = rgba(115,129, 88,1) = rgb0(0.451,0.506,0.345)
+   shade 3 = #485A28 = rgb( 72, 90, 40) = rgba( 72, 90, 40,1) = rgb0(0.282,0.353,0.157)
+   shade 4 = #3D5118 = rgb( 61, 81, 24) = rgba( 61, 81, 24,1) = rgb0(0.239,0.318,0.094)
+
+*** Complement color: Terra Cotta
+
+   shade 0 = #664240 = rgb(102, 66, 64) = rgba(102, 66, 64,1) = rgb0(0.4,0.259,0.251)
+   shade 1 = #A77F7D = rgb(167,127,125) = rgba(167,127,125,1) = rgb0(0.655,0.498,0.49)
+   shade 2 = #8B615F = rgb(139, 97, 95) = rgba(139, 97, 95,1) = rgb0(0.545,0.38,0.373)
+   shade 3 = #612D2B = rgb( 97, 45, 43) = rgba( 97, 45, 43,1) = rgb0(0.38,0.176,0.169)
+   shade 4 = #581D19 = rgb( 88, 29, 25) = rgba( 88, 29, 25,1) = rgb0(0.345,0.114,0.098)
+*/
+
+/* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* end of reset, start of layout */
+body, html {
+	height: 100%;
+}
+figure.background {
+	position: fixed;
+}
+figure.background img {
+	float: left;
+	overflow: hidden;
+
+}
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	padding-bottom: 10px;
+	text-align: left;
+	background-color: rgba(179,187,165,.925);	
+	border-radius: 15px 15px 0px 0px;
+	box-shadow: -2px 1px 5px rgba( 77,100,102,.75);
+	overflow: auto;
+	position: absolute;
+	z-index: 1;
+}
+*{
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+header {
+	max-height: 155px;
+	float:left;
+	width: 100%;
+	padding-bottom: 15px;
+	box-shadow: 1px 2px 3px black;
+	border-radius: 15px 15px 0 0;
+	background: #627d4d;
+	background: rgb(98,125,77);
+	background: -moz-linear-gradient(top,  rgba( 97,130,101,1) 0%, rgba( 33, 75, 38,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba( 97,130,101,1)), color-stop(100%,rgba( 33, 75, 38,1)));
+	background: -webkit-linear-gradient(top,  rgba( 97,130,101,1) 0%,rgba( 33, 75, 38,1) 100%);
+	background: -o-linear-gradient(top,  rgba( 97,130,101,1) 0%,rgba( 33, 75, 38,1) 100%);
+	background: -ms-linear-gradient(top,  rgba( 97,130,101,1) 0%,rgba( 33, 75, 38,1) 100%);
+	background: linear-gradient(to bottom,  rgba( 97,130,101,1) 0%,rgba( 33, 75, 38,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#627d4d', endColorstr='#1f3b08',GradientType=0 );
+
+
+}
+.logo {
+	float:left;
+	padding-left: 5px;
+	background: url(images/logo.png);
+	width: 150px;
+	height: 150px;
+}
+.pageTitle {
+	float:left;
+	padding-top: 2%;
+	padding-left: 5px;
+	text-align: center;
+}
+.mainNav ul {
+	float: left;
+	width: 12.1%;
+	margin-top: 10px;
+	margin-left: 2px;
+}
+.mainNav li{
+	font-size: 1.15em;
+	margin-top: 0px;
+}
+.mainNav a{
+	display: block;
+}
+.main {
+	float: left;
+	width: 60%;
+	margin-left: 5px;
+	margin-top: 10px;
+	overflow: auto;
+	padding-bottom: 5%;
+}
+.main figure {
+	width: 100%;
+	padding: 2px;
+	border-radius: 15px 15px;
+
+}
+.gallery figure {
+	border: 2px groove rgba(61,81,24,1);
+	margin: 2px;
+}
+.main figure img, .gallery figure img {
+	width: 100%;
+	border-radius: 15px 15px;
+	box-shadow: 3px 3px 5px;
+}
+figcaption {
+	text-align: center;
+	font-size: .9em;
+	line-height: 1.5em;
+}
+.sidebar {
+
+}
+aside {
+	padding: 5px;
+	border: 3px dotted rgba( 88, 29, 25,1);
+	border-radius: 10px 10px;
+	margin-top: 10px;
+	margin-right: 5px;
+	width: 25%;
+	float: right;
+}
+aside h1 {
+	border-bottom: 3px dotted rgba( 88, 29, 25,1);
+	margin: 0;
+}
+aside table {
+	width: 100%;
+	margin-bottom: .5%;
+}
+aside table td {
+	padding-right: 3px;
+}
+footer {
+	width: 100%;
+	position: fixed;
+	bottom:0;
+	height: 40px;
+	padding-bottom: 1%;
+}
+footer ul {
+	text-align: center;
+}
+footer li {
+	display: inline-block;
+}
+
+/* begining of styles */
+h1, h2, p, a, tr,td,th,ul, figcaption, input {
+	font-family: 'Alegreya', serif;
+}
+.banner h1 {
+	font-size: 5em;
+	text-shadow: 2px 2px 1px black;
+	letter-spacing: 1px;
+	font-weight: 900;
+	color: rgba( 16, 50, 53,1);
+	
+}
+.banner h2 {
+	font-size: 1.65em;
+	text-shadow: 1px 1px 1px black;
+	color: rgba( 88, 29, 25,1);
+	font-weight: 700;
+}
+.main {
+	margin-left: 1%;	
+	width: 60%;	
+}
+.main p {
+	text-align: justify;
+}
+.main h1, .gallery h1 {
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 2%;
+	margin-bottom: 3%;
+	text-shadow: 1px 1px 2px rgba(0,0,0,.65);
+
+}
+section.gallery {
+	float: left;
+	width: 60%;
+	margin: 0 1%;
+}
+section.gallery figure {
+	width: 30%;
+	display: inline-block;
+	vertical-align: top;
+	margin: 10px auto;
+	position: relative;
+}
+.gallery img {
+	width: 100%;
+	float: left;
+}
+.gallery figure:hover{
+	width: 66%;
+	float: left;
+	position: relative;
+	left: auto;
+	right: auto;
+	overflow: hidden;
+}
+.story {
+	margin: auto;
+	width: 90%;
+	border-radius: 4px 4px;
+	background-color: rgba(240,240,240,.4);
+	box-shadow: 4px 4px 5px rgba(0,0,0,.55);
+	margin-top: 1%;
+	padding: 1% .5%;
+	margin-bottom: 1%;
+}
+.story p{
+	font-size: 1.05em;
+	padding: 1%;
+}
+.story ul {
+	list-style: disc inside;
+	padding: 1%;
+	font-size: 1.15em;
+	font-weight: bold;
+}
+.story h3 {
+	font-style: italic;
+	font-size: .95em;
+}
+.main h2 {
+	font-size: 1.75em;
+	font-weight: bold;
+	margin-bottom: .5%;
+	text-shadow: 1px 1px 2px rgba(0,0,0,.65);
+}
+.mailList .label {
+	text-align: right;
+	width: 30%;
+	display: inline-block;
+	vertical-align: top;
+}
+.mailList input[type="submit"] {  
+  margin-left: 30.5%;
+  padding: 10px 25px;
+  font-size: 1em;
+	color: rgba( 16, 50, 53,1);
+	font-size: 1.15em;
+	background: -moz-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(141,155,116,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(212,228,239,1)), color-stop(100%, rgba(141,155,116,1)));
+	background: -webkit-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(141,155,116,1) 100%);
+	background: -o-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(141,155,116,1) 100%);
+	background: -ms-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(141,155,116,1) 100%);
+	background: linear-gradient(to right, rgba(212,228,239,1) 0%, rgba(141,155,116,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=1 );
+	border: none;
+	border-radius: 5px;
+	box-shadow: 2px 3px 2px rgba(0,0,0,.6) inset, 1px 1px 1px white;
+	-webkit-transition: background-color .5s linear;
+	-moz-transition: background-color .5s linear;
+	-o-transition-property: background-color .5s linear;
+	transition-property: background-color .5s linear;
+}
+.mailList input[type="submit"]:hover {
+	background: rgba( 16, 50, 53,8);
+	color: rgba(255,255,255,1);
+}
+.mailList input[type="text"], .mailList textarea {
+	width: 50%;
+	background: rgba(212,228,239,1);
+	background: -moz-linear-gradient(left, rgba(212,228,239,.5) 0%, rgba( 77,100,102,.5) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(212,228,239,.5)), color-stop(100%, rgba( 77,100,102,..5)));
+	background: -webkit-linear-gradient(left, rgba(212,228,239,.5) 0%, rgba( 77,100,102,.5) 100%);
+	background: -o-linear-gradient(left, rgba(212,228,239,.5) 0%, rgba( 77,100,102,.5) 100%);
+	background: -ms-linear-gradient(left, rgba(212,228,239,.5) 0%, rgba( 77,100,102,.5) 100%);
+	background: linear-gradient(to right, rgba(212,228,239,.5) 0%, rgba( 77,100,102,.5) 100%);
+	border:1px solid black;
+	border-radius: 4px 4px;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+}
+.mailList input[type="text"]:focus, .mailList textarea:focus {
+background: rgba(255,255,255,1);
+color: black;
+} 
+.mailList select {
+
+	border:1px solid black;
+	border-radius: 4px 4px;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+}
+hr {
+	width: 50%;
+	margin-bottom: 2%;
+	margin-top: 2%;
+}
+aside caption {
+	font-size: 1.15em;
+	font-weight: bold;
+	padding-bottom: 1%;
+	border-bottom: 3px dotted rgba( 88, 29, 25,1);
+}
+aside th {
+	font-weight: bold;
+	border-bottom: 1px solid black;
+	text-align: center;
+}
+aside tr {
+	font-size: .9em;
+}
+aside tr:nth-child(even){
+	background-color: rgba(167,127,125,.5);
+}
+aside td:nth-child(1){
+	width: 20%;
+	text-align: center;
+}
+aside td:nth-child(2){
+	text-align: right;
+}
+footer {
+	border-top: 1px solid black;
+	background-color: rgba( 16, 50, 53,1);
+	border-bottom: 2px solid rgba(16,50,53,1);
+
+}
+footer p {
+	text-align: center;
+	font-size: .75em;
+	font-style: italic;
+	color: white;
+		padding-bottom: 4px;
+
+}
+
+* {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+/*links*/
+a:link{
+	text-decoration: underline;
+	color: rgba(77,100,102,1);
+	font-size: .9em;
+}
+a:visited {
+	color: rgba(77,100,102,1);
+
+}
+a:hover {
+	color: rgba(167,127,125,1);
+}
+a:active {
+	color: rgba(141,155,116,1);
+}
+
+.mainNav a:link {
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-radius: 2px 2px;
+	color: rgba( 16, 50, 53,1);
+	font-size: 1.15em;
+	text-align: center;
+	box-shadow: 2px 3px 2px rgba(0,0,0,.6) inset, 1px 1px 1px white;
+	background: rgba(212,228,239,1);
+	font-weight: 700;
+	background: -moz-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(141,155,116,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(212,228,239,1)), color-stop(100%, rgba(141,155,116,1)));
+	background: -webkit-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(141,155,116,1) 100%);
+	background: -o-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(141,155,116,1) 100%);
+	background: -ms-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(141,155,116,1) 100%);
+	background: linear-gradient(to right, rgba(212,228,239,1) 0%, rgba(141,155,116,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=1 );
+	-webkit-transition: background-color .5s linear;
+	-moz-transition: background-color .5s linear;
+	-o-transition-property: background-color .5s linear;
+	transition-property: background-color .5s linear;
+	margin-top: 3px;
+	text-decoration: none;
+}
+.mainNav a:visited {
+	color: rgba( 16, 50, 53,1);
+}
+.mainNav a:hover {
+	color: rgba(255,255,255,1);
+	background: rgba( 16, 50, 53,8);
+	
+}
+.mainNav a:active {
+	background: rgba(167,127,125,1);
+}
+/* Media queries for responsive web design */
+
+@media (max-width:769px) {
+	figure.background {
+		background-image: url(images/bg2.png);
+	}
+	.banner h1 {
+		font-size: 2.8em;
+		position: absolute;
+		top: 40px;
+
+	}
+	.banner h2 {
+		font-size: 1.65em;
+		position: absolute;
+		top: 100px
+	}
+	.mainNav ul {
+		width: 100%;
+		float: none;
+	}
+	.mainNav li {
+		display: inline;
+		float: left;
+		width: 20%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.mainNav a {
+		display: block;
+		width: 100%;
+	}
+	.wrapper {
+		width: 100%;
+		max-width: 768px;
+
+
+	
+	}
+	.main {
+		width: 70%;
+	}
+	aside {
+		width: 27%;
+	}
+
+
+	}
+	section.gallery {
+		width: 69%;
+		margin-right: 1%;
+	}
+	.gallery figure {
+	width: 43%;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 2.1%;
+
+	}
+	.gallery img {
+		width: 100%;
+		
+	}
+	.gallery figure:hover{
+		width: 66%;
+		float: left;
+		position: relative;
+		left: auto;
+		right: auto;
+		overflow: hidden;
+}
+
+@media (max-width: 480px) {
+	.wrapper {
+		max-width: 480px;
+	}
+	.banner h1 {
+		font-size: 2.5em;
+		position: static;
+	}
+	.banner h2 {
+		font-size: 1.25em;
+		position: static;
+	}
+	.logo {
+		display: none;
+	}
+	.mainNav li {
+		font-size: .75em;
+	}
+	.main {
+		width: 100%;
+	}
+	.main h1 {
+		font-size: 1.75em;
+	}
+	.main h2 {
+		font-size: 1.5em;
+	}
+	.main p {
+		font-size: .975em;
+	}
+	section.gallery {
+		width: 100%;
+	}
+	section.gallery figure {
+		width: 100%;
+	}
+	section.gallery figure:hover {
+		width: 100%;
+	}
+	aside {
+		width: 100%;
+		margin: 0 auto;
+		border:none;
+	
+		padding-bottom: 20px;
+		}
+	aside table {
+		width: 100%;
+		margin: 0 auto;
+		padding-bottom: 10px;
+	}
+}
+@media (print) {
+
+}

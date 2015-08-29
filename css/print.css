@@ -1,0 +1,44 @@
+figure.background {
+	display: none;
+}
+.wrapper {
+	border-radius: 0;
+	box-shadow: none;
+}
+header {
+	box-shadow:none; 
+}
+header h1 {
+	font-size: 80pt;
+}
+header h2 {
+	font-size: 26pt;
+}
+.mainNav {
+	display: none;
+}
+.main {
+	width: 95%;
+}
+.main h1 {
+	font-size: 32pt;
+}
+.main figure {
+	display: none;
+}
+.story {
+	box-shadow: none;
+	border: none;
+}
+.story p {
+	font-size: 17pt;
+}
+.story ul {
+	font-size: 18pt;
+}
+aside {
+	display: none;
+}
+footer {
+	display: none;
+}
